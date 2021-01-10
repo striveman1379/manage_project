@@ -1,0 +1,9 @@
+#pycharm
+
+
+
+
+#Django stuff:
+
+local_settings.py
+*.sqlite3
