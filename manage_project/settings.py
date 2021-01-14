@@ -75,11 +75,23 @@ WSGI_APPLICATION = 'manage_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+#連接本地的mysql數據庫
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'managePj',
+            'HOST': '127.0.0.1',
+            'PORT': 3366,
+            'USER': 'root',
+            'PASSWORD': '123456',
+        }
 }
 
 
@@ -114,6 +126,24 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+
+# 腾讯云短信应用的 app_id
+
+TENCENT_SMS_APP_ID = 1400470623
+
+# 腾讯云短信应用的 app_key
+TENCENT_SMS_APP_KEY = "668c148d4b5a1e1e8f9b62ed899a29b3"
+
+# 腾讯云短信签名内容
+TENCENT_SMS_SIGN = "CODING杂谈"
+
+TENCENT_SMS_TEMPLATE = {
+    'register': 842633,
+    'login': 842634
+}
+
 
 
 # Static files (CSS, JavaScript, Images)
