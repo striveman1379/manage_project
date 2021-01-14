@@ -5,6 +5,7 @@ from utils.tencent.sms import send_sms_single
 # Create your views here.
 import random
 
+# def send_sms(request):
 def send_sms(request):
     """
     发送短信功能
@@ -13,8 +14,9 @@ def send_sms(request):
     :param request:
     :return:
     """
-    tpl = request.GET.get('tpl')
-    template_id = settings.TENCENT_SMS_TEMPLATE.get(tpl)
+    # tpl = request.GET.get('tpl')
+    # template_id = settings.TENCENT_SMS_TEMPLATE.get(tpl)
+    template_id = 842633
     if not template_id:
         return HttpResponse("模板不存在")
 
